@@ -1,0 +1,22 @@
+def calculate(r, unit, arr, n):
+    if n == 0:
+        return -1
+    house = 0
+    totalfoodrequired = r * unit
+    foodtillnow = 0
+    for house in range(n):
+        foodtillnow += arr[house]
+        if foodtillnow >= totalfoodrequired:
+            break
+
+    if foodtillnow < totalfoodrequired:
+        return 0
+
+    return house + 1
+
+
+i = int(input("Enter Number of Rats: "))
+iunit = int(input("Enter number of units of food needed per rat: "))
+iin = int(input("Enter Number of Houses: "))
+iarr = list(map(int, input("Enter the Unit of Food available in each House: ").split()))
+print("Number of Houses = ", calculate(i, iunit, iarr, iin))
