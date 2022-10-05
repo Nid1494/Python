@@ -1,0 +1,12 @@
+n = int(input())
+sum1 = int(input())
+array = list(map(int, input().split()))
+if n < 2:
+    print("-1")
+array = sorted(array)
+for i in range(n-1):
+    if array[i] + array[i+1] < sum1:
+        print(array[i]*array[i+1])
+        break
+    else:
+        print("0")
