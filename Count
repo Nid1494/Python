@@ -1,0 +1,14 @@
+def find_count(array, num, diff):
+    count = 0
+    for i in range(len(array)):
+        if abs(array[i]-num) <= diff:
+            count += 1
+    if count:
+        return count
+    return -1
+
+
+inte = list(map(int, input().split()))
+nums = int(input())
+difference = int(input())
+print(find_count(inte, nums, difference))
