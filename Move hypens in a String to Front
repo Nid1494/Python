@@ -1,0 +1,10 @@
+string = input()
+final = ""
+count = 0
+for i in string:
+    if i == "-":
+        count += 1 
+    else:
+        final += i
+final = "-"*count +final
+print(final)
