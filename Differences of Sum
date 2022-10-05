@@ -1,0 +1,14 @@
+def differences_of_sum(n, m):
+    divisible_sum = 0
+    not_divisible_sum = 0
+    for i in range(1, m):
+        if i % n == 0:
+            divisible_sum += i
+        else:
+            not_divisible_sum += i
+    return abs(divisible_sum-not_divisible_sum)
+
+
+num1 = int(input())
+num2 = int(input())
+print(differences_of_sum(num1, num2))
