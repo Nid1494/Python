@@ -1,0 +1,18 @@
+n = int(input())
+num = int(input())
+remainder = []
+quotient = num//n
+remainder.append(num%n)
+while quotient != 0:
+    remainder.append(quotient%n) 
+    quotient //= n
+remainder = remainder[::-1]
+equivalent = ''
+for i in remainder:
+    if i > 9:
+        a = i - 9
+        a = 64 + a
+        equivalent+=chr(a)
+    else:
+        equivalent+=str(i)
+print(equivalent)
