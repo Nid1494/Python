@@ -1,0 +1,16 @@
+def operation_on_binary_string(string):
+    i = 1
+    a = int(string[0])
+    while i < len(string):
+        if string[i] == 'A':
+            a &= int(string[i+1])
+        elif string[i] == 'B':
+            a |= int(string[i+1])
+        elif string[i] == 'C':
+            a ^= int(string[i+1])
+        i += 2
+    return a
+
+
+array = input()
+print(operation_on_binary_string(array))
